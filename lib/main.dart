@@ -8,16 +8,11 @@ void main() {
   OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
 
   // OneSignalの初期化 - YOUR-ONESIGNAL-APP-IDを実際のIDに置き換え
-  OneSignal.initialize("YOUR-ONESIGNAL-APP-ID");
+  OneSignal.initialize("");
 
   // プッシュ通知の許可を要求
   OneSignal.Notifications.requestPermission(true);
 
-  // ユーザーログイン時に呼び出し
-  OneSignal.login("USER_EXTERNAL_ID");
-
-  OneSignal.User.addEmail("user@example.com");
-  OneSignal.User.addSms("+11234567890");
   OneSignal.User.addTagWithKey("key", "value");
 
   runApp(const MyApp());
